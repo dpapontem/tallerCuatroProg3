@@ -1,0 +1,54 @@
+###
+POST http://localhost:5000/api/v2/series/serie HTTP/1.1
+Content-Type: application/json
+
+{
+    "serie": "la_Mantis",
+    "number_seasons": 6,
+    "original_lenguage": "ingles",
+    "features_seasons": [{
+
+        "season_number": 1,
+        "season_name": "je sais pas",
+        "premier_date":"2006-11-10",
+        "cast": ["autre","david"],
+        "episodes":[
+           {
+            "episode_name": "quelquechoses",
+            "time_number": 45
+            }
+        ]
+    }]
+}
+###
+GET http://localhost:5000/api/v2/series HTTP/1.1
+###
+GET http://localhost:5000/api/v2/series/62438c19df4bd0b5bb45a2a6 HTTP/1.1
+###
+GET http://localhost:5000/api/v2/series/Actor/pepito HTTP/1.1
+###
+GET http://localhost:5000/api/v2/series/Date/2006-11-10 HTTP/1.1
+###
+PUT http://localhost:5000/api/v2/series/62438c19df4bd0b5bb45a2a6 HTTP/1.1
+Content-Type: application/json
+
+{
+    "serie": "la_Mantis",
+    "number_seasons": 20,
+    "original_lenguage": "español",
+    "features_seasons": [{
+
+        "season_number": 5,
+        "season_name": "je sais pas",
+        "premier_date":"2006-11-10",
+        "cast": ["autre","david","uno mas"],
+        "episodes":[
+           {
+            "episode_name": "quelquechoses",
+            "time_number": 45
+            }
+        ]
+    }]
+}
+###
+DELETE http://localhost:5000/api/v2/series/62438aeaf5507e2bc6aedd5d HTTP/1.1
